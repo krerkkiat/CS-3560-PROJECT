@@ -1,6 +1,4 @@
-
-const expect = require('chai').expect;
-//const userInfo = require('../userInfo');
+var expect = chai.expect;
 
 describe('userInfo', function(){
     it('puts together name and age', function(){
@@ -11,13 +9,3 @@ describe('userInfo', function(){
         expect(userInfo("", ""), false);
     });
 });
-
-const userInfo = function(name, age) {
-    if(typeof name === 'string' && typeof age === 'string'){
-        return name + " " + age;
-    }else if(name === null && age === null){
-        return false;
-    }
-}
-
-module.exports = userInfo;
